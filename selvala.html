@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+	<link rel="stylesheet" type="text/css" href="site.css">
+
+<head>
+	<!-- this tells the browser important information about the website -->
+	<title>My Decks</title>
+  	<meta charset="utf-8">
+	<meta name="description" content="These are some of the decks that I have made.">
+	<script src="./site.js"></script>
+</head>
+
+	<body>
+
+
+		<div class="nav">
+			<h3>Navigation</h3>
+			<a href="./index.html" class="navlink">Home</a><br/>
+			<a href="./mydecks.html" class="navlink">My Decks</a><br/>
+			<a href="./sitemap.html" class="navlink">Site Map</a><br/>
+		</div>
+
+		<div class="body-content">
+			<h1>
+			<!-- heading tags can be used later to signal section of the website and allow for easier navigation -->
+				Selvala, Heart of the Wilds
+			</h1>
+
+			<div class="tab">
+				<button class="tablinks active" onclick="openTab(event, 'Overview')">Overview</button>
+				<button class="tablinks" onclick="openTab(event, 'Strategy')">Strategy</button>
+				<button class="tablinks" onclick="openTab(event, 'DeckTech')">Deck Tech</button>
+			</div>
+
+			<div class="tabcontent default" id="Overview">
+				<img src="https://img.scryfall.com/cards/large/en/cn2/70.jpg?1517813031" width="200em" class="img img-left">
+				<div>
+					<h2 id="Overview">Overview</h2>
+					<p>
+						Selvala is one of the strongest and most consistent decks I have constructed for the commander format.
+						The deck features many strong creature based strategies and value engines in order to grind out victories against
+						multiple opponents.
+					</p><p>
+						One such value engine is an ingrained ramp and card draw strategy based around selvala herself
+						with the aim being to play creatures in ascending order of power to maximise your card drawing capabilities as well
+						as build up your generation of mana with her second ability.
+					</p>
+				</div>
+			</div>
+
+			<!--##########################################################################-->
+
+			<div class="tabcontent" id="Strategy">
+				<div>
+					<img src="https://img.scryfall.com/cards/large/en/cn2/71.jpg?1517813031" width="200em" class="img img-right">
+
+					<h2>Strategy</h2>
+
+					<p>
+					The deck features multiple ways of deploying these creatures without paying for them or at least accelerating them out
+					ahead of the expected turn order. These include cards such as Selvala's Stampede which allows me to either get permanents
+					from my hand, or the next creature from my library, both of which are very favourable outcomes.
+					</p>
+				</div>
+				<div class="clear"><hr/></div>
+			</div>
+
+			<!--##########################################################################-->
+			
+			<div class="tabcontent" id="DeckTech">
+				<h2 id="Examples">Example Cards</h2>
+
+				<table>
+					<caption> These cards are an example of the types of cards included in the deck. </caption>
+					<tr>
+						<th>Image</th>
+						<th>Role</th>
+						<th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<img src="https://img.scryfall.com/cards/large/en/c17/223.jpg?1517813031" width="100em"/>
+						</td>
+						<td>
+							Accelleration
+						</td>
+						<td>
+							<p>
+								Sol Ring is an artifact which accelerates the deck's ability to play creatures
+								significantly by increasing the amount of mana we have available by 2, this
+								enables the deck to play 4 mana spells on turn 2. This also allows the deck
+								to put the commander in play on turn two which is extremely important for fast matchups.
+							</p>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<img src="https://img.scryfall.com/cards/large/en/mm2/1.jpg?1517813031" width="100em"/>
+						</td>
+						<td>
+							Sweeper/Wrath
+						</td>
+						<td>
+							<p>
+								All is Dust is a powerful card which enables the deck to clear the board of most threats
+								and reset all players back to the same playing level. This card has been included as a
+								way for the deck to catch up once other players have already developed a powerful board state.
+							</p><p>
+								The inclusion of such a powerful sweeper effect is a little unusual for this kind of deck as
+								generally speaking creature based strategies are weak towards such effects. However after playing
+								the deck without any sort of effect like this I found that there were many games where I wanted to
+								remove a lot of threats at once and spot removal wasn't going to cut it.
+							</p>
+
+						</td>
+					</tr>
+				</table>
+				<hr/>
+			</div>	
+		<!-- this is a comment -->
+		</div>
+	</body>
+
+</html>
