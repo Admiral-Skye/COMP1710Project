@@ -3,6 +3,8 @@ body {
   background-color:#a0ad93;
   font-family: Arial, Helvetica, Geneva, sans serif;
 }
+
+  /* TODO move colour changes to seperate CSS files for each of the decks and go with a neutral colour scheme as standard */
 h1 {
   color: #1f6831;
 }
@@ -120,5 +122,8 @@ object {
   border-top: none;
 }
   .tabcontent.default {
+    /* This overrides the above display setting when the "default" class is present making the panel display as open by default. */
+    /* Might apply this dynamically via js later so we can link to specific pages, similar to how you can link to ids by providing 
+        http://{websiteUrl}#{id} thingie. */
     display: block;
   }
