@@ -1,99 +1,78 @@
-<!DOCTYPE html>
-
-
 <html lang="en">
-<link rel="stylesheet" type="text/css" href="site.css">
+    <link rel="stylesheet" type="text/css" href="site.css">
 
-<head>
-	<!-- this tells the browser important information about the website -->
-	<title>Commander and me</title>
-  	<meta charset="utf-8">
-	<meta name="description" content="The website for my commander collection">
-	<script src="https://code.jquery.com/jquery.min.js"></script>
+    <head>
+        <!-- this tells the browser important information about the website -->
+        <title>Commander and me</title>
+        <meta charset="utf-8">
+        <meta name="description" content="The website for my commander collection">
+        <script src="https://code.jquery.com/jquery.min.js"></script>
+    </head>
 
-</head>
+    <body>
+        
 
-<body>
+        <div class="nav">
+            <h3>Navigation</h3>
+            <a href="./index.html" class="navlink">Home</a><br/>
+            <a href="./mydecks.html" class="navlink">My Decks</a><br/>
+            <a href="./sitemap.html" class="navlink">Site Map</a><br/>
+            <a href="./battlefield.html" class="navlink">The battlefield</a><br/>
+            <a href="./video.html" class="navlink">What's the deal with sleeves?</a><br/>
+            <a href="./sourcelog.html" class="navlink">Source log</a><br/>
+            <a href="./about.html" class="navlink">About</a>
+        </div>
 
+        <div class="body-content">
+            <h1>
+                Me and My Passion
+            </h1>
+            <p>
+                Hi, I am Sebastian Van Den Dungen, a 4th year software engineering student at the ANU and this is my website about my commander decks.
+            </p>
+            <p>
+                Commander is a format of playing the trading card game <a href="https://magic.wizards.com/" target="_blank">Magic: The Gathering</a> for 
+                two or more players. 
+            </p>
+            <p>
+                In magic there are many different ways to play with the same sets of cards, the official ways are referred to as “Formats”. Commander is 
+                a format developed from the community and is one of the less competitive formats allowing for a variety of styles of play.
+            </p>
 
-    <div class="nav">
-        <h3>Navigation</h3>
-        <a href="./index.html" class="navlink">Home</a><br/>
-        <a href="./mydecks.html" class="navlink">My Decks</a><br/>
-        <a href="./sitemap.html" class="navlink">Site Map</a><br/>
-		<a href="./battlefield.html" class="navlink">The battlefield</a><br/>
-        <a href="./video.html" class="navlink">What's the deal with sleeves?</a><br/>
-        <a href="./sourcelog.html" class="navlink">Source log</a><br/>
-    </div>
+            <p>
+                Commander is my favourite format as it allows me to be very creative about what decks I want to build and play as there are many different '
+                viable and fun archetypes to build. 
+            </p>
+            <p>
+                Commander is one of what are known as singleton formats, meaning that apart from basic land cards, each card within the deck must be unique. 
+                This greatly reduces the cost of entry to the format as new players do not need to purchase multiple copies of important cards in order to be 
+                competitive. 
 
-    <div class="body-content">
-        <h1>
-            Me and My Passion
-        </h1>
-        <p>
-            Hi, I am Sebastian Van Den Dungen, a 4th year software engineering student at the ANU and this is my website about my commander decks.
-        </p>
-        <p>
-            Commander is a format of playing the trading card game <a href="https://magic.wizards.com/" target="_blank">Magic: The Gathering</a> for 
-            two or more players. 
-        </p>
-        <p>
-            In magic there are many different ways to play with the same sets of cards, the official ways are referred to as “Formats”. Commander is 
-            a format developed from the community and is one of the less competitive formats allowing for a variety of styles of play.
-        </p>
+            </p>
+            <p>
+                Additionally the format gets its name from a rule unique to the format, the commander card. This card, sometimes called the general, is usually 
+                a creature spell which is legendary (meaning a named character from the lore). This commander card is usually selected by the player building 
+                the deck to either synergise with the overall strategy of the deck, provide the requisite colours, or provide an interesting ability to the deck.
 
-        <p>
-            Commander is my favourite format as it allows me to be very creative about what decks I want to build and play as there are many different '
-            viable and fun archetypes to build. 
-        </p>
-        <p>
-            Commander is one of what are known as singleton formats, meaning that apart from basic land cards, each card within the deck must be unique. 
-            This greatly reduces the cost of entry to the format as new players do not need to purchase multiple copies of important cards in order to be 
-            competitive. 
+            </p>
+            <p>
+                My decks tend to follow the first selection criteria with the commander of the deck being a vital component of the deck’s functionality. 
+            </p>
+            <p>
+                My goal with this site is to chronicle my current design strategy and compositions for my existing decks as well as the new decks that I build. 
+                I hope that this in the future will enable me to reflect upon my decisions and choices in order to build better decks in the future. Additionally 
+                this website will allow me to express my ideas as they currently stand and gather feedback from visitors that I will integrate into my understanding 
+                of the format and the commanders I chose to play with.
+            </p>
 
-        </p>
-        <p>
-            Additionally the format gets its name from a rule unique to the format, the commander card. This card, sometimes called the general, is usually 
-            a creature spell which is legendary (meaning a named character from the lore). This commander card is usually selected by the player building 
-            the deck to either synergise with the overall strategy of the deck, provide the requisite colours, or provide an interesting ability to the deck.
-
-        </p>
-        <p>
-            My decks tend to follow the first selection criteria with the commander of the deck being a vital component of the deck’s functionality. 
-        </p>
-        <p>
-            My goal with this site is to chronicle my current design strategy and compositions for my existing decks as well as the new decks that I build. 
-            I hope that this in the future will enable me to reflect upon my decisions and choices in order to build better decks in the future. Additionally 
-            this website will allow me to express my ideas as they currently stand and gather feedback from visitors that I will integrate into my understanding 
-            of the format and the commanders I chose to play with.
-        </p>
-
-        <div>
-            <div class="replyform" id="feedback">
-
-                <!-- TODO Move this to each of the deck pages so that it makes more sense. -->
-
-                <h4>Tell me what you think!</h4>
-                <p>
-                    Please complete the form below to let me know what you think about my website. If you would like a response, please include your email address.
-                </p>
-                <form enctype="text/plain" action="mailto:u5561028@anu.edu.au">
-                What do you think of my deck?
-                <input type="text" name="some_text" size="35" maxlength="50">
-                <br/>
-                Any suggestion for cards I could include?
-                <input type="text" name="some_text" size="41" maxlength="50">
-                <br/>
-                Your email?
-                <input type="text" name="some_text" size="50" maxlength="50">
-                <hr>
-                Submit:
-                <input type="submit" value="Send it">
-                or
-                <input type="reset" value="Clear">
-                <hr>
-                </form>
+            
+            <div id="feed">
+                <h2>Commander and MTG News</h2>
+                <p>Sourced from <a href="http://www.edhrec.com">EDHRec</a> and <a href="http://mtggoldfish.com">MTG Goldfish</a></p>
+                <section>
+                    <script src="http://rss.bloople.net/?url=http%3A%2F%2Fwww.rssmix.com%2Fu%2F8284380%2Frss.xml&limit=10&showtitle=false&type=js"></script>
+                </section>
             </div>
         </div>
-    </div>
-</body>
+    </body>
+</html>

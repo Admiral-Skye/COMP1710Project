@@ -1,20 +1,35 @@
 body {
   padding-top: 20px;
-  background-color:#a0ad93;
+  background-color:#303030;
   font-family: Arial, Helvetica, Geneva, sans serif;
 }
 
-  /* TODO move colour changes to seperate CSS files for each of the decks and go with a neutral colour scheme as standard */
-h1 {
-  color: #1f6831;
+p, li, td {
+  color: rgb(170, 170, 170);
 }
-h2 {
-  color: Green;
+  li b {
+    color: rgb(200, 200, 200)
+  }
+
+  /* TODO move colour changes to seperate CSS files for each of the decks and go with a neutral colour scheme as standard */
+a {
+  color: aqua;
+  text-decoration: none;
+}
+  a:visited {
+    color: rgb(0, 121, 121);
+  }
+  a:hover {
+    color: rgb(0, 202, 202);
+  }
+
+h1, h2, h3, h4, th {
+  color: rgb(230, 230, 230);
 }
 
 
 td {
-    border-top: 2px solid green;
+    border-top: 2px solid grey;
     padding: 3px
 }
 
@@ -24,14 +39,20 @@ object {
 }
 
 
+/*centre the text on the deck card images.*/
+.desc h4 {
+  text-align: center;
+}
+
 .replyform {
   padding: 2em;
-  border: medium dashed green;
+  border: medium solid grey;
 }
 
 .body-content {
-  margin-right: 20%;
-  margin-left: 20%;
+  margin: auto;
+  width: 60%;
+  height: 100%;
 }
 
 .nav {
@@ -82,14 +103,57 @@ object {
   clear: left;
 }
 
+/* Styling for MyDecks page */
+/* Whole block */
+.deck-img {
+  margin: 10px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 250px;
+  padding: 5px;
+  border-radius: 3px;
+  background-color: #484949;
+}
+  .deck-img.green {
+    border: 1px solid rgb(8, 163, 0);
+    background-color: #1f6831;
+  }
+    .deck-img.green:hover{
+      border: 2px solid rgb(8, 163, 0);
+    }
+  .deck-img.gold{
+    border: 1px solid rgb(210, 233, 4);
+    background-color: #bd8905;
+  }
+    .deck-img.gold:hover{
+      border: 2px solid rgb(210, 233, 4);
+    }
+  .deck-img:hover {
+    border: 2px solid #ccc;
+    transform: scale(1.01);
+    box-shadow: #484949;
+  }
+
+
+.deck-img img {
+  width: 100%;
+  height: auto;
+}
+
+/* description */
+.deck-desc {
+  padding: 15px;
+  text-align: center;
+}
+
+
 /* ############### Tab styling  ############# */
 /* from https://www.w3schools.com/howto/howto_js_tabs.asp */
 
 /* Style the tab */
 .tab {
   overflow: hidden;
-  border: 1px solid #ccc;
-  background-color: #f1f1f1;
+  border-bottom: grey solid;
 }
 
 /* Style the buttons inside the tab */
@@ -102,23 +166,27 @@ object {
   padding: 14px 16px;
   transition: 0.3s;
   font-size: 17px;
+  width: 33%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: lightgrey;
 }
 
 /* Change background color of buttons on hover */
 .tab button:hover {
-  background-color: #ddd;
+  background-color: grey;
 }
 
 /* Create an active/current tablink class */
 .tab button.active {
-  background-color: #ccc;
+  background-color: #5e5e5e;
+  width: 34%;
 }
 
 /* Style the tab content */
 .tabcontent {
   display: none;
   padding: 6px 12px;
-  border: 1px solid #ccc;
   border-top: none;
 }
   .tabcontent.default {
@@ -127,3 +195,158 @@ object {
         http://{websiteUrl}#{id} thingie. */
     display: block;
   }
+
+
+/* 
+  ####################################################################
+    Styles for the image gallery.
+  
+  Adapted from https://www.w3schools.com/howto/howto_js_lightbox.asp
+  Tweaked by me to suit the platform and delivery of card images.
+*/
+.card-small {
+  width: auto;
+  height: 200px;
+  padding: 0.3em;
+}
+
+.card-large {
+  width: 33.3333333%;
+  min-width: 200px;
+  /* Positions the card at the middle of the page. may look funny on mobile */
+  padding: 0 33.3333333% 0 33.3333333%;
+  margin: auto;
+}
+
+
+.gallery-row > .gallery-column {
+  padding: 0 8px;
+}
+  
+.gallery-row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Create four equal gallery-columns that floats next to eachother */
+.gallery-column {
+  float: left;
+  width: 15%;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 1200px;
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Hide the slides by default */
+.slide {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Caption text */
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+}
+
+
+
+/* default thumbnail colouration */
+img.thumbnail {
+  opacity: 0.6;
+}
+  /* active image thumbnail */
+  img.thumbnail.active{
+    opacity: 1;
+  }
+  img.thumbnail:hover {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+
+
+img.hover-shadow {
+  transition: 0.3s
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+}

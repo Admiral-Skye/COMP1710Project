@@ -2,15 +2,16 @@
 
 
 <html lang="en">
-	<link rel="stylesheet" type="text/css" href="site.css">
+	<link rel="stylesheet" type="text/css" href="site.css"> <!--Default theme-->
+	<link rel="stylesheet" type="text/css" href="green-site.css"><!--Green theme-->
 
-<head>
-	<!-- this tells the browser important information about the website -->
-	<title>My Decks</title>
-  	<meta charset="utf-8">
-	<meta name="description" content="These are some of the decks that I have made.">
-	<script src="./site.js"></script>
-</head>
+	<head>
+		<!-- this tells the browser important information about the website -->
+		<title>My Decks</title>
+		<meta charset="utf-8">
+		<meta name="description" content="These are some of the decks that I have made.">
+		<script src="./site.js"></script>
+	</head>
 
 	<body>
 
@@ -23,6 +24,7 @@
 			<a href="./battlefield.html" class="navlink">The battlefield</a><br/>
 			<a href="./video.html" class="navlink">What's the deal with sleeves?</a><br/>
 			<a href="./sourcelog.html" class="navlink">Source log</a><br/>
+            <a href="./about.html" class="navlink">About</a>
 		</div>
 
 		<div class="body-content">
@@ -63,14 +65,15 @@
 			<div class="tabcontent" id="Strategy">
 				<div>
 					<img src="https://img.scryfall.com/cards/large/en/cn2/71.jpg?1517813031" width="200em" class="img img-right">
+					<div>
+						<h2>Strategy</h2>
 
-					<h2>Strategy</h2>
-
-					<p>
-					The deck features multiple ways of deploying these creatures without paying for them or at least accelerating them out
-					ahead of the expected turn order. These include cards such as Selvala's Stampede which allows me to either get permanents
-					from my hand, or the next creature from my library, both of which are very favourable outcomes.
-					</p>
+						<p>
+						The deck features multiple ways of deploying these creatures without paying for them or at least accelerating them out
+						ahead of the expected turn order. These include cards such as Selvala's Stampede which allows me to either get permanents
+						from my hand, or the next creature from my library, both of which are very favourable outcomes.
+						</p>
+					</div>
 				</div>
 				<div class="clear"><hr/></div>
 			</div>
@@ -80,55 +83,109 @@
 			<!--##########################################################################-->
 			
 			<div class="tabcontent" id="DeckTech">
-				<h2 id="Examples">Example Cards</h2>
+				<p>
+					The deck features a lot of large creatures and ways to cheat them into play. Additionally the deck contains many ways to draw more cards and remove the opponents threats from the board. Some examples of these cards are shown below. Click on one to see a larger image.
+				</p>
+				<!-- image gallery -->
+				<div class="gallery-row">
+					<div class="gallery-column">
+					  	<img src="https://img.scryfall.com/cards/large/en/aer/123.jpg?1517813031" onclick="openModal();currentSlide(1)" class="hover-shadow card-small">
+					</div>
+					<div class="gallery-column">
+					  	<img src="https://img.scryfall.com/cards/large/en/ema/169.jpg?1519048847" onclick="openModal();currentSlide(2)" class="hover-shadow card-small">
+					</div>
+					<div class="gallery-column">
+					  	<img src="https://img.scryfall.com/cards/large/en/pca/57.jpg?1517813031" onclick="openModal();currentSlide(3)" class="hover-shadow card-small">
+					</div>
+					<div class="gallery-column">
+					  	<img src="https://img.scryfall.com/cards/large/en/ths/166.jpg?1517813031" onclick="openModal();currentSlide(4)" class="hover-shadow card-small">
+					</div>
+					<div class="gallery-column">
+						<img src="https://img.scryfall.com/cards/large/en/pz2/65787.jpg?1517813031" onclick="openModal();currentSlide(5)" class="hover-shadow card-small">
+					</div>
+					<div class="gallery-column">
+						<img src="https://img.scryfall.com/cards/large/en/rtr/140.jpg?1517813031" onclick="openModal();currentSlide(6)" class="hover-shadow card-small">
+					</div>
+				</div>
 
-				<table>
-					<caption> These cards are an example of the types of cards included in the deck. </caption>
-					<tr>
-						<th>Image</th>
-						<th>Role</th>
-						<th>Description</th>
-					</tr>
-					<tr>
-						<td>
-							<img src="https://img.scryfall.com/cards/large/en/c17/223.jpg?1517813031" width="100em"/>
-						</td>
-						<td>
-							Accelleration
-						</td>
-						<td>
-							<p>
-								Sol Ring is an artifact which accelerates the deck's ability to play creatures
-								significantly by increasing the amount of mana we have available by 2, this
-								enables the deck to play 4 mana spells on turn 2. This also allows the deck
-								to put the commander in play on turn two which is extremely important for fast matchups.
-							</p>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<img src="https://img.scryfall.com/cards/large/en/mm2/1.jpg?1517813031" width="100em"/>
-						</td>
-						<td>
-							Sweeper/Wrath
-						</td>
-						<td>
-							<p>
-								All is Dust is a powerful card which enables the deck to clear the board of most threats
-								and reset all players back to the same playing level. This card has been included as a
-								way for the deck to catch up once other players have already developed a powerful board state.
-							</p><p>
-								The inclusion of such a powerful sweeper effect is a little unusual for this kind of deck as
-								generally speaking creature based strategies are weak towards such effects. However after playing
-								the deck without any sort of effect like this I found that there were many games where I wanted to
-								remove a lot of threats at once and spot removal wasn't going to cut it.
-							</p>
+				<!-- Popup image modal for full view of the card -->
+				<div id="myModal" class="modal">
+					<span class="close cursor" onclick="closeModal()">&times;</span>
+					<div class="modal-content">
+						<!-- Large card slides  -->
+						<div class="slide">
+							<div class="numbertext">1 / 6</div>
+							<img src="https://img.scryfall.com/cards/large/en/aer/123.jpg?1517813031" class="card-large">
+						</div>
+					
+						<div class="slide">
+							<div class="numbertext">2 / 6</div>
+							<img src="https://img.scryfall.com/cards/large/en/ema/169.jpg?1519048847" class="card-large">
+						</div>
+					
+						<div class="slide">
+							<div class="numbertext">3 / 6</div>
+							<img src="https://img.scryfall.com/cards/large/en/pca/57.jpg?1517813031" class="card-large">
+						</div>
+					
+						<div class="slide">
+							<div class="numbertext">4 / 6</div>
+							<img src="https://img.scryfall.com/cards/large/en/ths/166.jpg?1517813031" class="card-large">
+						</div>
 
-						</td>
-					</tr>
-				</table>
-				<hr/>
+						<div class="slide">
+							<div class="numbertext">5 / 6</div>
+							<img src="https://img.scryfall.com/cards/large/en/pz2/65787.jpg?1517813031" class="card-large">
+						</div>
+						
+						<div class="slide">
+							<div class="numbertext">6 / 6</div>
+							<img src="https://img.scryfall.com/cards/large/en/rtr/140.jpg?1517813031" class="card-large">
+						</div>
+					
+						<!-- Next/previous controls -->
+						<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+						<a class="next" onclick="plusSlides(1)">&#10095;</a>
+					
+						<!-- Caption text -->
+						<div class="caption-container">
+							<p id="caption"></p>
+						</div>
+					
+						<!-- Thumbnail image controls
+							these are the controls in the full-screen view -->
+						<div class="gallery-column">
+							<img class="thumbnail card-small" src="https://img.scryfall.com/cards/large/en/aer/123.jpg?1517813031" onclick="currentSlide(1)" alt="<b>Rishkar's Expertise</b><br/><p>Drawing cards is an important part of keeping the value engine going as the deck draws a lot of hate and needs to be able to keep up the pressure when its threats are removed.</p>">
+						</div>
+					
+						<div class="gallery-column">
+							<img class="thumbnail card-small" src="https://img.scryfall.com/cards/large/en/ema/169.jpg?1519048847" onclick="currentSlide(2)" alt="<b>Green Sun's Zenith</b><br/><p>One of the best tool-boxing cards in the deck. Green Sun's Zenith is able to find and put into play almost any creature from the deck allowing it to be used in a wide variety of situations to find the right tool for the job.</p>">
+						</div>
+					
+						<div class="gallery-column">
+							<img class="thumbnail card-small" src="https://img.scryfall.com/cards/large/en/pca/57.jpg?1517813031" onclick="currentSlide(3)" alt="<b>Beast Within</b><br/><p>One of the best removal types cards in the colour. Beast Within is able to handle almost any kind of threat our opponent can throw at us with just the measly cost of 3 mana.</p>">
+						</div>
+					
+						<div class="gallery-column">
+							<img class="thumbnail card-small" src="https://img.scryfall.com/cards/large/en/ths/166.jpg?1517813031" onclick="currentSlide(4)" alt="<b>Nylea, God of the Hunt</b><br/><p>Nylea is an all-around good creature/enchantment. Being indestructible she blocks really well, her stats are very good and the fact she gives the rest of our team trample is a key reason she is in the deck.</p>">
+						</div>
+						<div class="gallery-column">
+							<img class="thumbnail card-small" src="https://img.scryfall.com/cards/large/en/pz2/65787.jpg?1517813031" onclick="currentSlide(5)" alt="<b>Selvala's Stampede</b><br/><p>While not the strongest effect like this, this card leads to some really fun board interactions and decisions being made by both me and my opponents. Many of these put creatures into play effects are putting the next creature from my library onto the battlefield. Allowing for both powerful and exciting gameplay for me and others.</p>">
+						</div>
+						<div class="gallery-column">
+							<img class="thumbnail card-small" src="https://img.scryfall.com/cards/large/en/rtr/140.jpg?1517813031" onclick="currentSlide(5)" alt="<b>Worldspine Wurm</b><br/><p>I have tried to pick creatures for this deck that were not only very large but also did something when the entered the battlefield to prevent the problem of 'Just dies to removal'. The Worldspine Wurm is sort of an example of that in that it is both very large (largest creature by base stats in the game) but also doesn't just die to a single kill spell.</p>">
+						</div>
+					</div>
+				  </div>
+
 			</div>	
+
+			<div>
+				<h4>
+					Discuss this deck on my subreddit!
+				</h4>
+				<script type="text/javascript" src="http://www.redditstatic.com/button/button1.js"></script>
+			</div>
 		</div>
 	</body>
 
